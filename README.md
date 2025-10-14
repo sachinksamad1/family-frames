@@ -15,7 +15,7 @@ No user authentication or cloud storage is used — all images are processed loc
 ## 🧠 Tech Stack
 | Layer | Technology |
 |---|---|
-| Frontend | Angular 19, TypeScript, Angular Material, TailwindCSS |
+| Frontend | Angular, TypeScript, Angular Material, TailwindCSS |
 | Backend | Node.js, Express.js, TypeScript |
 | AI Integration | Google Gemini Nano Banana API |
 | Utilities | Multer, Axios, dotenv, CORS |
