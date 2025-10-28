@@ -1,44 +1,23 @@
+// tsconfig.json (for ESM)
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
+    /* Modules */
+    "module": "NodeNext",             // Use Node's modern module system
+    "moduleResolution": "NodeNext",   // Use Node's resolution logic (requires explicit extensions in imports)
+    "target": "ES2022",               // Target a modern ECMAScript version
+    "outDir": "./dist",               // Output directory for compiled JS files
+    "rootDir": "./src",               // Root directory of TypeScript source files
+    "sourceMap": true,                // Generate source maps for debugging
+    
+    /* Type Checking */
+    "strict": true,                   // Enable all strict type-checking options
+    "esModuleInterop": true,          // Allow default imports from modules with no default export
+    "skipLibCheck": true,             // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // Ensure consistent file casing
+    "resolveJsonModule": true,        // Allow importing JSON files
 
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
-
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-
-    // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
-
-    // Recommended Options
-    "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true,
-  }
+    /* Emit */
+    "lib": ["ES2022"],                // Specify library files to be included in the compilation
+  },
+  "include": ["src/**/*"]
 }

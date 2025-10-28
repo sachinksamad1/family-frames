@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import { generateFamilyPhoto } from "../utils/geminiClient";
+import type { Request, Response } from "express";
+import { generateFamilyPhoto } from "../utils/geminiClient.js";
 
 export const createFamilyPhoto = async (req: Request, res: Response) => {
   try {
