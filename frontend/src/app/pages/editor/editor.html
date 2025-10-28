@@ -1,1 +1,16 @@
-<p>editor works!</p>
+<div class="max-w-3xl mx-auto mt-8 p-6 bg-gray-50 rounded-lg shadow-lg">
+  <app-upload (photosSelected)="onPhotosSelected($event)"></app-upload>
+
+  <div class="mt-4">
+    <label class="block mb-2 text-sm font-medium">Select Frame Style</label>
+    <select [(ngModel)]="selectedStyle" class="border rounded-md p-2 w-full">
+      <option *ngFor="let s of styles" [value]="s">{{ s | titlecase }}</option>
+    </select>
+  </div>
+
+  <button (click)="generateFamilyPhoto()" class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">
+    {{ loading ? 'Generating...' : 'Generate Family Photo' }}
+  </button>
+
+  <app-result *ngIf="generatedImage" [generatedImage]="generatedImage"></app-result>
+</div>

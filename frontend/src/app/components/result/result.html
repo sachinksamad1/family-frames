@@ -1,1 +1,7 @@
-<p>result works!</p>
+<div *ngIf="generatedImage" class="text-center mt-4">
+  <h3 class="text-lg font-semibold mb-2">Generated Family Photo</h3>
+  <img [src]="generatedImage" alt="Family Photo" class="max-w-full rounded-lg shadow-md mb-4" />
+  <button (click)="downloadImage()" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+    Download
+  </button>
+</div>
